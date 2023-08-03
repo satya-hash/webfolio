@@ -1,6 +1,6 @@
 ## Webfolio.
 
-[Demo](https://satya-hash.github.io/Webfolio./)
+[Demo](https://satya-hash.github.io/webfolio/)
 
 ### Preview
 
