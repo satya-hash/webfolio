@@ -1,0 +1,121 @@
+.about {
+  background-color: inherit rgba(255, 0, 0, 0.247);
+  min-height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.about h3 {
+  color: #9a73b5;
+  position: relative;
+}
+.about h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 1rem;
+  background-color: #9a73b5;
+}
+.about .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.about .dp {
+  height: 300px;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+.about .dp img {
+  height: 300px;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: top;
+}
+.about .details {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.about .details h2 {
+  font-weight: 600;
+}
+.about .details p {
+  font-size: 15px;
+}
+.about .details button {
+  padding: 0.75rem 2.5rem;
+  outline: none;
+  border: 2px solid #9a73b5;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: #9a73b5;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.about .details button:hover {
+  background-color: #9a73b5;
+  color: #ffffff;
+}
+
+@media screen and (width > 1080px) {
+  .about {
+    padding: 2rem 8rem;
+  }
+  .about .intro {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+  }
+  .about .intro .dp {
+    height: 400px;
+  }
+  .about .intro .dp img {
+    height: 400px;
+  }
+  .about .intro .details {
+    width: 60%;
+    text-align: left;
+    align-items: flex-start;
+  }
+  .about .intro .details h2 {
+    margin-bottom: 2rem;
+  }
+  .about .intro .details p {
+    font-size: 17px;
+  }
+}
+@media screen and (786px < width <= 1080px) {
+  .about {
+    padding: 2rem 6rem;
+  }
+  .about .intro {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+  }
+  .about .intro .details {
+    width: 70%;
+    text-align: left;
+    align-items: flex-start;
+  }
+  .about .intro .details h2 {
+    margin-bottom: 2rem;
+  }
+  .about .intro .details p {
+    font-size: 16px;
+  }
+}

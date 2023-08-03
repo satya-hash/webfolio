@@ -1,0 +1,192 @@
+nav {
+  width: 100%;
+  background-color: #9a73b5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+nav.sticky-nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+nav .logo h4 {
+  font-weight: 600;
+  background: -webkit-linear-gradient(175deg, #536976, #292e49);
+  background: #b3ffab;
+  background: -webkit-linear-gradient(57deg, #b3ffab 0%, #12fff7 100%);
+  background: linear-gradient(57deg, #b3ffab 0%, #12fff7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: spin 3s linear infinite;
+}
+@keyframes spin {
+  0% {
+    background: #b3ffab;
+    background: -webkit-linear-gradient(57deg, #b3ffab 0%, #12fff7 100%);
+    background: linear-gradient(57deg, #b3ffab 0%, #12fff7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  25% {
+    background: #b3ffab;
+    background: -webkit-linear-gradient(70deg, #b3ffab 0%, #12fff7 100%);
+    background: linear-gradient(70deg, #b3ffab 0%, #12fff7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background: #b3ffab;
+    background: -webkit-linear-gradient(183deg, #b3ffab 0%, #12fff7 100%);
+    background: linear-gradient(183deg, #b3ffab 0%, #12fff7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  75% {
+    background: #b3ffab;
+    background: -webkit-linear-gradient(287deg, #b3ffab 0%, #12fff7 100%);
+    background: linear-gradient(287deg, #b3ffab 0%, #12fff7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: #b3ffab;
+    background: -webkit-linear-gradient(360deg, #b3ffab 0%, #12fff7 100%);
+    background: linear-gradient(360deg, #b3ffab 0%, #12fff7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+nav .navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+nav .icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+nav .theme-toggle {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+nav .menu {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  align-items: center;
+  z-index: 3;
+}
+nav .menu span {
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+nav .menu.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+nav .menu.open span:nth-child(2) {
+  opacity: 0;
+}
+nav .menu.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+nav .nav-keys {
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+nav .nav-keys ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 2rem;
+}
+nav .nav-keys ul li {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+nav .nav-keys ul li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2.5px;
+  bottom: 0;
+  left: 0;
+  background-color: #2d2d2d;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+nav .nav-keys ul li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  top: 0;
+  left: 0;
+  background-color: #2d2d2d;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+nav .nav-keys ul li:hover a {
+  color: #2d2d2d;
+}
+nav .nav-keys ul li:hover::before {
+  transform: scaleX(1);
+  transform-origin: top left;
+}
+nav .nav-keys ul li:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom right;
+}
+nav .nav-keys ul a {
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.25s ease-out;
+}
+nav .show {
+  display: flex;
+}
+
+@media screen and (width >= 786px) {
+  nav {
+    flex-direction: row;
+  }
+  nav .nav-keys {
+    display: flex;
+    flex-direction: row;
+  }
+  nav .nav-keys ul {
+    flex-direction: row;
+  }
+  nav .menu {
+    display: none;
+  }
+}

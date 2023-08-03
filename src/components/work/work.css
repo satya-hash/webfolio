@@ -1,0 +1,118 @@
+.work {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.work > h3 {
+  text-align: center;
+  color: #9a73b5;
+  position: relative;
+  display: inline-block;
+}
+.work > h3::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #9a73b5;
+  left: 0;
+  bottom: 0;
+  border-radius: 1rem;
+}
+.work .projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  gap: 2rem;
+}
+.work .projects .item {
+  width: 90%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.work .projects .item a {
+  width: 80%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.work .projects .item a:hover img {
+  transform: scale(1.05);
+}
+.work .projects .item a img {
+  border-radius: 1rem;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.3s ease;
+}
+.work .projects .item .description h2 {
+  margin-bottom: 1rem;
+}
+.work .projects .item .description ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.work .projects .item .description .btns {
+  display: flex;
+  gap: 1rem;
+}
+.work .projects .item .description .btns button {
+  padding: 0.35rem 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  outline: none;
+  border: 2px solid #9a73b5;
+  background-color: transparent;
+  color: #9a73b5;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+.work .projects .item .description .btns button:hover {
+  opacity: 0.8;
+}
+.work .projects .item .description .btns button img {
+  width: 1rem;
+  height: 1rem;
+}
+.work .projects .item .description .btns button:first-child {
+  color: #ffffff;
+  background-color: #9a73b5;
+}
+
+@media screen and (786px < width < 1080px) {
+  .projects .item {
+    width: 85%;
+  }
+  .projects .item a {
+    width: 60%;
+  }
+  .projects .item .description {
+    width: 70%;
+  }
+}
+@media screen and (width >= 1080px) {
+  .work .projects .item {
+    width: 75%;
+    flex-direction: row;
+  }
+  .work .projects .item a {
+    width: 40%;
+  }
+  .work .projects .item .description {
+    width: 50%;
+  }
+  .work .projects .item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}

@@ -1,0 +1,55 @@
+.home {
+  height: 90vh;
+  margin-top: 3rem;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  text-align: center;
+}
+.home .intro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.home .intro ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+.home .intro ul li {
+  width: 64px;
+  height: 64px;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.home .intro ul li:hover {
+  transform: scale(1.1);
+}
+.home .intro ul li a {
+  color: #9e9e9e;
+}
+.home .intro ul li a img {
+  width: 100%;
+  height: 100%;
+}
+.home .intro h1 {
+  font-size: 72px;
+}
+.home .intro h2 span {
+  color: #9a73b5;
+}
+.home .intro h4 span {
+  color: #9e9e9e;
+}
+
+@media screen and (width < 768px) {
+  .home .intro h1 {
+    font-size: 48px;
+  }
+}
