@@ -1,8 +1,7 @@
-/* eslint-disable react/prop-types */
-import { useState } from "react";
+import React, { useState } from "react";
 import sun from "../../assets/icons/icons8-sun-100.png";
 import moon from "../../assets/icons/icons8-moon-100.png";
-import "./navbar.css";
+import "./navbar.scss";
 
 function Navbar({ theme, setTheme }) {
   const [isopen, setIsopen] = useState(false);

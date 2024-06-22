@@ -1,0 +1,18 @@
+@import "../../styles/index";
+
+footer {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  background-color: $bg-dark-100;
+  z-index: -1;
+
+  p {
+    color: $text;
+    span {
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: $title;
+    }
+  }
+}

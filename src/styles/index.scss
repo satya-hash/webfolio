@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	scroll-behavior: smooth;
+}
+
+// Dark palette
+$primary-dark-100: #0085ff;
+$primary-dark-200: #69b4ff;
+$primary-dark-300: #e0ffff;
+$accent-dark-100: #006fff;
+$accent-dark-200: #e1ffff;
+$text-dark-100: #ffffff;
+$text-dark-200: #9e9e9e;
+$bg-dark-100: #1e1e1e;
+$bg-dark-200: #2d2d2d;
+
+// Light palette
+// $primary-100: #8b5fbf;
+// $primary-200: #61398f;
+// $primary-300: #ffffff;
+// $accent-100: #d6c6e1;
+// $accent-200: #9a73b5;
+// $text-100: #4a4a4a;
+// $text-200: #878787;
+// $bg-100: #f5f3f7;
+// $bg-200: #e9e4ed;
+
+$primary-100: #d4eaf7;
+$primary-200: #b6ccd8;
+$primary-300: #3b3c3d;
+$accent-100: #71c4ef;
+$accent-200: #00668c;
+$text-100: #1d1c1c;
+$text-200: #313d44;
+$bg-100: #fffefb;
+$bg-200: #f5f4f1;
+$bg-300: #cccbc8;
+
+$bg: $bg-dark-200;
+$text: $text-dark-100;
+$title: $text-dark-200;
+$accent: $accent-200;
+
+@mixin transition {
+	transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+body.light {
+	$bg: $bg-200;
+	$text: $text-100;
+	$title: $text-100;
+	$accent: $accent-100;
+
+	background: $bg;
+	color: $text;
+}
+
+body.dark {
+	$bg: $bg-dark-200;
+	$text: $text-dark-100;
+	$title: $text-dark-200;
+	$accent: $accent-dark-100;
+
+	background: $bg;
+	color: $text;
+}
+
+html {
+	font-size: 100%;
+}
+
+/* 16px */
+body {
+	font-weight: 400;
+	line-height: 1.75;
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: "Josefin Sans", sans-serif;
+	font-weight: 600;
+	line-height: 1.3;
+	margin-top: 0;
+}
+
+h1 {
+	font-size: 3.052rem;
+}
+
+h2 {
+	font-size: 2.441rem;
+}
+
+h3 {
+	font-size: 1.953rem;
+}
+
+h4 {
+	font-size: 1.563rem;
+}
+
+h5 {
+	font-size: 1.25rem;
+}
+
+small,
+.text_small {
+	font-size: 0.8rem;
+}
+
+/* Media query removed because it was invalid (width<600px) */

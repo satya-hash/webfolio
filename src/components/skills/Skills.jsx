@@ -1,5 +1,4 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import htmlSvg from "../../assets/icons/icons8-html-5-144.png";
 import cssSvg from "../../assets/icons/icons8-css3-144.png";
 import jsSvg from "../../assets/icons/icons8-javascript-144.png";
@@ -12,54 +11,60 @@ import figmaSvg from "../../assets/icons/figma.png";
 import firebaseSvg from "../../assets/icons/firebase.png";
 import tailwindSvg from "../../assets/icons/icons8-tailwindcss-144.png";
 import nextjsSvg from "../../assets/icons/icons8-next.js-144.png";
+import springSvg from "../../assets/icons/spring.png";
+import protractorSvg from "../../assets/icons/protractor.png";
+import playwrightSvg from "../../assets/icons/playwright.png";
 import sr from "../ScrollReveal";
 
-import "./skills.css";
+import "./skills.scss";
 
 function Skills() {
-  let skills = [
-    { img: htmlSvg, name: "HTML" },
-    { img: cssSvg, name: "CSS" },
-    { img: jsSvg, name: "JavaScript" },
-    { img: sassSvg, name: "Sass" },
-    { img: reactSvg, name: "React Js" },
-    { img: nodeSvg, name: "Node Js" },
-    { img: firebaseSvg, name: "Firebase" },
-    { img: figmaSvg, name: "Figma" },
-    { img: gitSvg, name: "Git" },
-    { img: cSvg, name: "C++" },
-    { img: tailwindSvg, name: "Tailwind CSS" },
-    { img: nextjsSvg, name: "Next Js" },
-  ];
+	let skills = [
+		{ img: htmlSvg, name: "HTML" },
+		{ img: cssSvg, name: "CSS" },
+		{ img: jsSvg, name: "JavaScript" },
+		{ img: sassSvg, name: "Sass" },
+		{ img: reactSvg, name: "React Js" },
+		{ img: nodeSvg, name: "Node Js" },
+		{ img: firebaseSvg, name: "Firebase" },
+		{ img: figmaSvg, name: "Figma" },
+		{ img: gitSvg, name: "Git" },
+		{ img: cSvg, name: "C++" },
+		{ img: tailwindSvg, name: "Tailwind CSS" },
+		{ img: nextjsSvg, name: "Next Js" },
+		{ img: springSvg, name: "Spring Boot" },
+		{ img: protractorSvg, name: "Protractor" },
+		{ img: playwrightSvg, name: "PlayWright" },
+	];
 
-  useEffect(() => {
-    skills.forEach((skill, i) => {
-      sr.reveal(`.icon-${i}`, { delay: `${i}00` });
-    });
-  }, []);
-  return (
-    <div className="skills">
-      <h3> Skills </h3>
-      <div className="skills-icons">
-        <ul>
-          {skills.map((skill, i) => {
-            let { img, name } = skill;
-            return (
-              <li key={i}>
-                <img
-                  className={`icon-${i / 3}`}
-                  src={img}
-                  alt={name}
-                  style={{ width: "80%" }}
-                />
-                <span> {name} </span>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    </div>
-  );
+	useEffect(() => {
+		skills.forEach((skill, i) => {
+			sr.reveal(`.icon-${i}`, { delay: `${i}00` });
+		});
+	}, []);
+	return (
+		<div className="skills">
+			<h3> Skills </h3>
+			<div className="skills-icons">
+				<ul>
+					{skills.map((skill, i) => {
+						let { img, name } = skill;
+						return (
+							<li key={i}>
+								<img
+									className={`icon-${i / 3}`}
+									src={img}
+									alt={name}
+									style={{ width: "80%" }}
+								/>
+								<span> {name} </span>
+							</li>
+						);
+					})}
+				</ul>
+			</div>
+		</div>
+	);
 }
 
 export default Skills;

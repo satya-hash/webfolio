@@ -1,11 +1,10 @@
-/* eslint-disable react/no-unescaped-entities */
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import phone from "../../assets/icons/phone.png";
 import whatsapp from "../../assets/icons/whatsapp.png";
 import gmail from "../../assets/icons/mail.png";
 import emailjs from "@emailjs/browser";
 import sr from "../ScrollReveal";
-import "./contact.css";
+import "./contact.scss";
 
 function Contact() {
   const formRef = useRef();
@@ -62,7 +61,6 @@ function Contact() {
                 <a
                   href="https://api.whatsapp.com/send?phone=9550973113&text=Hi%20we%20need%20help%20regarding%20something"
                   target="_blank"
-                  rel="noreferrer"
                 >
                   <img src={whatsapp} alt="whatsapp" />
                 </a>

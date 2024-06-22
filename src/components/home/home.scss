@@ -1,0 +1,76 @@
+@import "../../styles/index.scss";
+
+.home {
+  height: 90vh;
+  margin-top: 3rem;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  .intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      gap: 1rem;
+
+      li {
+        width: 64px;
+        height: 64px;
+        @include transition;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        a {
+          color: $title;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    h1 {
+      font-size: 72px;
+    }
+
+    h2 {
+      span {
+        color: $accent;
+      }
+    }
+
+    h4 {
+      span {
+        color: $title;
+      }
+    }
+  }
+}
+
+@media screen and (width< 768px) {
+  .home {
+    .intro {
+      h1 {
+        font-size: 48px;
+      }
+    }
+  }
+}

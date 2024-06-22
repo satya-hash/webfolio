@@ -1,8 +1,7 @@
-/* eslint-disable react/no-unescaped-entities */
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import dp from "../../assets/satya.jpg";
 import sr from "../ScrollReveal";
-import "./about.css";
+import "./about.scss";
 
 function About() {
   useEffect(() => {
@@ -18,7 +17,7 @@ function About() {
         </div>
         <div className="details">
           <h2>
-            I'am <span>Satya</span>
+            I'am <span>Satya</span>{" "}
           </h2>
           <p>
             I am a final year student studying B.tech at Andhra university

@@ -1,10 +1,8 @@
 import ScrollReveal from "scrollreveal";
 
-const sr = ScrollReveal({
+export default ScrollReveal({
   origin: "top",
-  distance: "80px",
   duration: 500,
+  distance: "80px",
   reset: true,
 });
-
-export default sr;

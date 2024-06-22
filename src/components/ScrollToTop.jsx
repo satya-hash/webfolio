@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import top from "../assets/icons/icons8-send-letter-96.png";
 function ScrollToTop() {
   const [show, setShow] = useState(false);
