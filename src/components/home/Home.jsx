@@ -14,7 +14,7 @@ function Home() {
 
 	return (
 		<div className="home">
-			<Ripple />
+			{/* <Ripple /> */}
 			<div className="intro">
 				<div className="home-title">
 					<h1> HELLO , AMIGOS </h1>

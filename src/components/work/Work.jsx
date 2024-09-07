@@ -1,22 +1,10 @@
 import React, { useEffect } from "react";
 import "./work.scss";
-
 import shoemineImg from "../../assets/shoemine.png";
 import smsImg from "../../assets/sms.png";
 import onestopImg from "../../assets/1stop.png";
 import fitfusionImg from "../../assets/fit-fusion.png";
-
-import rapidSvg from "../../assets/icons/api.png";
-import htmlSvg from "../../assets/icons/icons8-html-5-144.png";
-import cssSvg from "../../assets/icons/icons8-css3-144.png";
-import jsSvg from "../../assets/icons/icons8-javascript-144.png";
-import tailwindSvg from "../../assets/icons/icons8-tailwindcss-144.png";
-import firebaseSvg from "../../assets/icons/firebase.png";
-import reactSvg from "../../assets/icons/icons8-react-native-144.png";
-import viteSvg from "../../assets/icons/Vite.js.png";
-import muiSvg from "../../assets/icons/icons8-material-ui-144.png";
-import stripeSvg from "../../assets/icons/stripe.png";
-
+import codingNoteImg from "../../assets/coding-note.png";
 import web from "../../assets/icons/icons8-website-64.png";
 import code from "../../assets/icons/icons8-code-90.png";
 import sr from "../ScrollReveal";
@@ -26,6 +14,16 @@ function Work() {
 		return { __html: htmlString };
 	}
 	let projects = [
+		{
+			name: "Coding Note",
+			description: `Coding Note is your go-to resource for front-end development insights and problem-solving. This blog offers concise, practical content tailored for developers aiming to enhance their skills. Whether you're tackling a coding challenge or refining your design approach, Coding Note provides the tools and knowledge to succeed. Dive in and elevate your development journey.`,
+			links: [
+				`https://codingnote.vercel.app/`,
+				`https://github.com/satya-hash/coding-note`,
+			],
+			image: codingNoteImg,
+			svgs: ["Next js", "Shadcn", "Tailwind css"],
+		},
 		{
 			name: "Shoemine",
 			svgs: ["react js ", "material ui", "stripte", "commerce js"],
@@ -41,7 +39,7 @@ function Work() {
 			svgs: ["react js", "firebase"],
 			description: `The Student Management System is a web portal developed using ReactJS and Firebase, designed to provide students of Andhra University with access to their academic results, attendance records, and personal details. Administrators can use the system to manage and update student information, academic results, and attendance records. Firebase is utilized to manage user authentication and data retrieval.`,
 			links: [
-				"https://satya-hash.github.io/Project-4.2",
+				"https://au-portal.netlify.app/	",
 				"https://github.com/satya-hash/Project-4.2",
 			],
 			image: smsImg,
@@ -66,6 +64,7 @@ function Work() {
 			image: fitfusionImg,
 			svgs: ["vite", "rapid API", "material ui"],
 		},
+		
 	];
 
 	useEffect(() => {
@@ -95,10 +94,11 @@ function Work() {
 								<p>{description}</p>
 								<h4 className="text-base">Skills</h4>
 								<ul>
+											
 									{svgs.map((svg, i) => (
 										<li key={i}>
 											{" "}
-											<span className="capitalize text-xs font-medium me-2 px-2.5 py-0.5 rounded-full ">
+											<span>
 												{svg}
 											</span>
 										</li>
