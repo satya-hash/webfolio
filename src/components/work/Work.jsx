@@ -64,7 +64,7 @@ function Work() {
 			image: fitfusionImg,
 			svgs: ["vite", "rapid API", "material ui"],
 		},
-		
+
 	];
 
 	useEffect(() => {
@@ -94,7 +94,6 @@ function Work() {
 								<p>{description}</p>
 								<h4 className="text-base">Skills</h4>
 								<ul>
-											
 									{svgs.map((svg, i) => (
 										<li key={i}>
 											{" "}
@@ -110,14 +109,14 @@ function Work() {
 											window.open(`${links[0]}`, "_blank");
 										}}>
 										{" "}
-										<img src={web} alt="web" /> Live Demo
+										<img src={web} alt="web" /> <span>Live Demo</span>
 									</button>
 									<button
 										onClick={() => {
 											window.open(`${links[1]}`, "_blank");
 										}}>
 										{" "}
-										<img src={code} alt="code" /> Code
+										<img src={code} alt="code" /> <span >Code</span>
 									</button>
 								</div>
 							</div>
