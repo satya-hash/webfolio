@@ -53,13 +53,13 @@ function Contact() {
           <div className="icons">
             <ul>
               <li>
-                <a href="tel:9550973113">
+                <a href="tel:8341353034">
                   <img src={phone} alt="phone" />
                 </a>
               </li>
               <li>
                 <a
-                  href="https://api.whatsapp.com/send?phone=9550973113&text=Hi%20we%20need%20help%20regarding%20something"
+                  href="https://api.whatsapp.com/send?phone=8341353034&text=Hi%20we%20need%20help%20regarding%20something"
                   target="_blank"
                 >
                   <img src={whatsapp} alt="whatsapp" />
